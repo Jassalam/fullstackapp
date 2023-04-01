@@ -1,0 +1,15 @@
+<div class="container w-50 m-auto">
+    <legend>Send Message to the Owner!</legend>
+    <div class="form-group">
+        <label class="form-label">Email: </label>
+        <input type="email" name ="email" 
+        class="form-control" [(ngModel)]="email">
+    </div>
+    <div class="form-group">
+        <label class="form-label">Message: </label>
+        <textarea name ="message" cols="20" rows="5"
+         class="message" [(ngModel)]="message">
+        </textarea>
+    </div>
+    <button (click)="sendMessage()" class="btn btn-success"> Send </button>
+</div>

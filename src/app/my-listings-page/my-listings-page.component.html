@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="card mb-3 p-3" *ngFor="let listing of listings">
+
+        <h3>{{listing?.name}}</h3>
+        <p>{{listing?.description}}</p>
+        <p>${{listing?.price}}</p>
+        <div class="card-body text-end">
+            <a routerLink="/edit-listing/{{listing.id}}" 
+            type="button" class="btn btn-warning mx-3">
+               Edit</a>
+    
+
+            <button class="btn btn-danger" (click)="onDeleteClicked(listing.id)">
+                Delete</button>
+            </div>
+    </div>
+
+<div>
+    <a routerLink="/new-listing" 
+            type="button" class="btn btn-info">Create Listing</a>
+</div>
+</div>
