@@ -12,6 +12,8 @@ import { EditListingPageComponent } from './edit-listing-page/edit-listing-page.
 import { FormsModule } from '@angular/forms';
 import { ListingDataFormComponent } from './listing-data-form/listing-data-form.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    FormsModule
+    FormsModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

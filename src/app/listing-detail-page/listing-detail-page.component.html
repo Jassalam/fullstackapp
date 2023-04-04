@@ -1,14 +1,20 @@
-    <div class="container">
-        <div class="card mb-3 p-3">
+    <div class="container" *ngIf="!isLoading">
+        <p>This Listing has been viewed{{listing?.views}} times</p>
+        <div class="card mb-3 p-3"> 
             <a routerLink="/listings">
                 <button type="button" class="btn btn-dark">Back</button></a>
             <h3>{{listing?.name}}</h3>
             <p>{{listing?.description}}</p>
             <p>${{listing?.price}}</p>
+           
             <a routerLink="/contact/{{listing?.id}}">
                 <button type="button" class="btn btn-dark">Contact Me</button></a>
         </div>
 
+    </div>
+    <div class="container" *ngIf="isLoading">
+        <h3>Loading.....</h3>
+    
     </div>
     
 

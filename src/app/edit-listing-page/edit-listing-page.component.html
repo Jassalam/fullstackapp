@@ -1,8 +1,13 @@
-<app-listing-data-form
+ 
+<app-listing-data-form *ngIf="listing"
 buttonText="Save Changes"
 pageTitle="Edit Listing"
-currentName="{{listing?.name}}"
-currentDescription="{{listing?.description}}"
-currentPrice="{{listing?.price}}"
-(onSubmit)="onSubmit()"
+currentName="{{listing.name}}"
+currentDescription="{{listing.description}}"
+currentPrice="{{listing.price}}"
+(onSubmit)="onSubmit($event)"
 ></app-listing-data-form>
+
+<div class="card" *ngIf="!listing">
+    <h3>Loading....</h3>
+</div>

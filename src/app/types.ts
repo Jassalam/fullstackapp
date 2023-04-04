@@ -3,4 +3,5 @@ export interface Listing {
     name: String,
     description: String,
     price: Number,
+    views: Number
 }
